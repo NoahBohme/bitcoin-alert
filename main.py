@@ -30,7 +30,7 @@ while (True):
                 osascript -e 'display notification "{}" with title "{}"'
                 """.format(text, title))
 
-    if price > alertprice:
+    if price < alertprice:
         os.system('afplay alert.mp3')
         notify("Bitcoin alert", "Bitcoin price is now " +
                str(price) + " " + currency.upper())
